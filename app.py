@@ -96,7 +96,7 @@ with gr.Blocks(title="Clinical Experience Resume") as demo:
     gr.Markdown(
         f"# Clinical Experience Resume\n\n**{DISCLAIMER}**\n\n"
         "Consumes [shadowing-hours-schema@0.1.0](https://github.com/Cross-Clinical/shadowing-hours-schema).\n\n"
-        "[Cross Clinical OSS](https://github.com/Cross-Clinical/awesome) · "
+        "[Cross Clinical OSS](https://github.com/Cross-Clinical/suite-index) · "
         "[ProMedNet](https://crossclinical.com)"
     )
     text = gr.Code(language="json", label="Paste JSON (object or array)", value=json.dumps(EXAMPLE, indent=2))

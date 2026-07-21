@@ -20,4 +20,4 @@ Upload `shadowing-hours-schema` JSON (or paste) → Markdown résumé section.
 
 Schema: https://github.com/Cross-Clinical/shadowing-hours-schema
 
-[Cross Clinical OSS](https://github.com/Cross-Clinical/awesome) · [ProMedNet](https://crossclinical.com)
+[Cross Clinical OSS](https://github.com/Cross-Clinical/suite-index) · [ProMedNet](https://crossclinical.com)

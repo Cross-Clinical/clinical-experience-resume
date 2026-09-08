@@ -8,7 +8,7 @@ from pathlib import Path
 import gradio as gr
 from jsonschema import validate, ValidationError
 
-from input_guard import DISCLAIMER
+from input_guard import DISCLAIMER, guard_input
 
 SCHEMA = json.loads(
     (Path(__file__).parent / "schema" / "shadowing-hour-record.schema.json").read_text()
@@ -39,6 +39,9 @@ def _load_records(text: str, file_obj) -> list[dict]:
         raw = text
     else:
         raise ValueError("Paste JSON or upload a .json file.")
+    blocked = guard_input(raw)
+    if blocked:
+        raise ValueError(blocked)
     data = json.loads(raw)
     if isinstance(data, dict):
         return [data]
